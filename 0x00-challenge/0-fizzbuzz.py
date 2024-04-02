@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ FizzBuzz
 """
-import sys
+from sys import argv, exit
 
 
 def fizzbuzz(n):
@@ -29,11 +29,11 @@ def fizzbuzz(n):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) <= 1:
+    if len(argv) <= 1:
         print("Missing number")
-        print("Usage: ./0-fizzbuzz.py <number>")
+        print("Usage: ./<exec_file> <number>")
         print("Example: ./0-fizzbuzz.py 89")
-        sys.exit(1)
+        exit(1)
 
-    number = int(sys.argv[1])
+    number = int(argv[1])
     fizzbuzz(number)
